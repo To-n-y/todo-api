@@ -1,0 +1,236 @@
+{
+	"info": {
+		"_postman_id": "437d9973-4184-46dc-a8fc-632984656d3c",
+		"name": "Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24491212"
+	},
+	"item": [
+		{
+			"name": "Get All ToDos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:80/toDoList",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "80",
+					"path": [
+						"toDoList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get toDo by title",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:80/toDoList/Buy_milk",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "80",
+					"path": [
+						"toDoList",
+						"Buy_milk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new toDo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2Njk5MjczMDksImlhdCI6MTY2OTkyNzAwOSwibmJmIjoxNjY5OTI3MDA5LCJpZGVudGl0eSI6M30.BY9kFKAgw_iSsN5vUh5xAIsforRsCRklbUwLowvmSj0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"buy 10 eggs\",\r\n    \"done\": false\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:80/toDoList/Buy_eggs",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "80",
+					"path": [
+						"toDoList",
+						"Buy_eggs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Bob\",\r\n    \"password\": \"asdf\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:80/auth",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "80",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Bob\",\r\n    \"password\": \"asdf\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:80/signup",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "80",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete toDo by title",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2Njk5MjgyNjMsImlhdCI6MTY2OTkyNzk2MywibmJmIjoxNjY5OTI3OTYzLCJpZGVudGl0eSI6M30.MsnVvfDKtW1GMg-bsv8Z-QMjArBGXcq1FXsHMB_mplw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:80/toDoList/Buy_milk",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "80",
+					"path": [
+						"toDoList",
+						"Buy_milk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put toDo by title",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2Njk5MjE1NDcsImlhdCI6MTY2OTkyMTI0NywibmJmIjoxNjY5OTIxMjQ3LCJpZGVudGl0eSI6M30.3jwdOJKc5FyYdutZCwde3a70cCa4FDGJMc1_hLFDxR8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"buy 30 eggs\",\r\n    \"done\": false\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:80/toDoList/Buy_eggs",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "80",
+					"path": [
+						"toDoList",
+						"Buy_eggs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
