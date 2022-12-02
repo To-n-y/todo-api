@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+postman_collection/
+db/
+
 # Distribution / packaging
 .Python
 build/
