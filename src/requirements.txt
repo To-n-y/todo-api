@@ -1,0 +1,7 @@
+Flask
+flask_restful
+JWT
+flask_jwt
+PyJWT==1.7.1
+Werkzeug
+peewee

@@ -1,0 +1,27 @@
+version: '3.9'
+services:
+
+  server:
+    build: src/
+    command: python ./api.py
+    volumes:
+      - ./db:/db #Docker  -> settings ->Resources -> FileSharing. Add required folder and hit Apply & Restart
+
+
+    ports:
+      - "80:80"
+
+
+  client:
+
+
+    build: client/
+
+    command: python ./testclient.py
+
+    network_mode: host
+
+
+
+    depends_on:
+      - server
