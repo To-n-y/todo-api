@@ -13,6 +13,6 @@ P.S. You can install Docker Toolbox if you have an older Windows release than Wi
    - make a copy of the template of .env file `cp .env.template .env`
    - assign actual values to all fields.
 4. To mount the database, go to Docker and then do: Settings -> Resources -> FileSharing. Add db folder and push Apply & Restart
-5. Run containers `docker-compose up`;
+5. Run containers `docker-compose up` or `make run_container`;
 6. When the project is running, go to `localhost:80` and check if you see 'Not Found'. If you have installed Docker Toolbox, go to `http://192.168.100.14:80`
 7. Go to localhost:80/toDoList or check the postman collection.
